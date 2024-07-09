@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primaryColor: #023e8a;
+    --secondaryColor: #ffc300;
+    --mainRedColor: #ff002b;
+    --darkRedColor: #d00000;
+    --mainGreenColor: #70e000;
+    --darkGreenColor: #38b000;
+    --mainBlueColor: #00b4d8;
+    --darkBlueColor: #0096c7;
+    --mainYellowColor: #ffea00;
+    --darkYellowColor: #ffd000;
+    --defaultColor: #ffffff;
+    --darkColor: #000000;
+    --headingFont: Lilita One;
+    --primaryFont: Nunito;
+}
+
+body{
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    position: relative;
+}
+
+.imageSection{
+    img{
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+header{
+    width: 100%;
+    height: auto;
+    color: var(--defaultColor);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+    position: relative;
+    top: 0;
+    font-family: var(--headingFont);
+    
+    #logoImage{
+        width: 150px;
+        display: flex;
+        align-items: center;
+        
+        img{
+            margin-right: 20px;
+        }
+
+        .headerLogo{
+            font-size: 40px;
+        }
+    }
+}
+
+main{   
+    color: var(--defaultColor);
+    margin: 150px;
+    width: fit-content;
+    font-family: var(--primaryFont);
+    
+    .container{
+        padding: 15px;
+        width: 300px;
+        margin-bottom: 30px;
+        text-align: center;
+        border-radius: 5px;
+        color: var(--darkColor);
+        font-weight: bold;
+        background-color: var(--secondaryColor);
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    #musicSubcontainer{
+        position: absolute;
+        width: 30%;
+        height: 30%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: var(--primaryColor);
+        border: 5px solid var(--darkColor);
+        border-radius: 10px;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .headingMusic{
+            margin-bottom: 30px;
+        }
+
+        .radios{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            width: 50%;
+            font-size: 20px;
+
+            input[type="radio"]{
+                margin-right: 5px;
+            }
+        }
+    }
+}

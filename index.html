@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="images" href="images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <title>Ludo Hub</title>
+</head>
+<body>
+    <header>
+        <div class="imageSection" id="logoImage">
+            <img src="images/logo.png" alt="" class="logo">
+            <p class="headerLogo">LUDO HUB</p>
+        </div>
+    </header>
+
+    <main>
+        <audio src="BGM.mp3" loop autoplay></audio>
+         <div class="container">New Game</div>
+         <div class="container">Music</div>
+         <div class="container">Sound</div>
+
+         <div class="subcontainer" id="musicSubcontainer">
+            <h1 class="headingMusic">Music</h1>
+            <div class="radios">
+                <div class="radio">
+                    <input type="radio" id="on" name="toggle" value="on" checked>
+                    <label for="on">On</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" id="off" name="toggle" value="off">
+                    <label for="off">Off</label>
+                </div>               
+            </div>
+         </div>
+    </main>
+</body>
+</html>
