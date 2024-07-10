@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <script src="app.js" defer></script>
     <title>Ludo Hub</title>
 </head>
 <body>
@@ -19,24 +20,39 @@
     </header>
 
     <main>
-        <audio src="BGM.mp3" loop autoplay></audio>
-         <div class="container">New Game</div>
-         <div class="container">Music</div>
-         <div class="container">Sound</div>
+        <div id="blackCover"></div>
 
-         <div class="subcontainer" id="musicSubcontainer">
-            <h1 class="headingMusic">Music</h1>
+        <button id="newgameBtn" class="buttons">Play Now</button>
+
+        <div id="playerNoContainer">
+            <h1 class="playerHeading">Select Players</h1>
+
             <div class="radios">
                 <div class="radio">
-                    <input type="radio" id="on" name="toggle" value="on" checked>
-                    <label for="on">On</label>
+                    <label for="2_players">
+                        <input type="radio" name="players" value="2-players" id="2_players"> 2 Players
+                    </label>
+                </div>
+                <div class="radio">    
+                    <label for="3_players">
+                        <input type="radio" name="players" value="3-players" id="3_players"> 3 Players
+                    </label>
                 </div>
                 <div class="radio">
-                    <input type="radio" id="off" name="toggle" value="off">
-                    <label for="off">Off</label>
-                </div>               
+                    <label for="4_players">
+                        <input type="radio" name="players" value="4-players" id="4_players"> 4 Players
+                    </label>
+                </div>
             </div>
-         </div>
+
+            <div class="buttonBox">
+                <button id="cancelBtn" class="buttons">Cancel</button>
+                <button id="nextBtn" class="buttons" disabled>Next</button>
+            </div>
+        </div>
+
+         <!-- <audio src="audios/BGM.mp3" loop autoplay></audio> -->
     </main>
 </body>
 </html>
+
