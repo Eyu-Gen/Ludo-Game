@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primaryColor: #023e8a;
+    --secondaryColor: #ffc300;
+    --mainRedColor: #ff002b;
+    --darkRedColor: #d00000;
+    --mainGreenColor: #70e000;
+    --darkGreenColor: #38b000;
+    --mainBlueColor: #00b4d8;
+    --darkBlueColor: #0096c7;
+    --mainYellowColor: #ffea00;
+    --darkYellowColor: #ffd000;
+    --defaultColor: #ffffff;
+    --darkColor: #000000;
+    --headingFont: Lilita One;
+    --primaryFont: Nunito;
+}
+
+body{
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--primaryFont);
+    background-color: var(--primaryColor);
+}
+
+main{
+    width: 50%;
+    aspect-ratio: 1/1;
+    background-color: var(--defaultColor);
+    border: 20px solid var(--defaultColor);
+    box-shadow: 2px 2px 20px var(--darkColor);
+}
+
+.centerDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+}
+
+.updownContainer{
+    width: 100%;
+    height: 40%;
+}
+
+.middleContainer{
+    width: 100%;
+    height: 20%;
+}
+
+.starBox{
+    font-size: 50px;
+    color: var(--defaultColor);
+    padding-top: 15px;
+}
+
+.safeBlue{
+    background-color: var(--mainBlueColor);
+}
+
+.safeRed{
+    background-color: var(--mainRedColor);
+}
+
+.safeGreen{
+    background-color: var(--mainGreenColor);
+}
+
+.safeYellow{
+    background-color: var(--mainYellowColor);
+}
+
+.colorSubcontainer{
+    width: 40%;
+    aspect-ratio: 1/1;
+    border: 2px solid var(--darkColor);
+
+    .innerBox{
+        width: 70%;
+        aspect-ratio: 1/1;
+        background-color: var(--defaultColor);
+        display: grid;
+        grid-template-columns: auto auto;
+        place-items: center;
+
+        .innerboxItems{
+            width: 60%;
+            aspect-ratio: 1/1;
+        }
+    }
+}
+
+.updownMiddleSubcontainer{
+    width: 20%;
+    display: flex;
+    
+    .middleInnerbox{
+        border: 1.5px solid var(--darkColor);
+        border-bottom: none;
+    }
+
+    .innerBox{
+        width: 33.33%;
+        height: 100%;
+        border-top: 1.5px solid var(--darkColor);
+
+        .smallBoxes{
+            width: 100%;
+            height: 16.67%;
+            border-bottom: 1.5px solid var(--darkColor);
+        }
+    }
+    
+}
+
+hr{
+    border: 2px solid var(--darkColor);
+    width: 141%;
+    position: absolute;
+}
+
+#hr1{
+    transform: rotate(45deg);
+}
+
+#hr2{
+    transform: rotate(135deg);
+}
+
+#redSubcontainer{
+    background-color: var(--mainRedColor);
+
+    .innerboxItems{
+        background-color: var(--mainRedColor);
+    }
+}
+
+#blueSubcontainer{
+    background-color: var(--mainBlueColor);
+
+    .innerboxItems{
+        background-color: var(--mainBlueColor);
+    }
+}
+
+#yellowSubcontainer{
+    background-color: var(--mainYellowColor);
+    border-top: none;
+
+    .innerboxItems{
+        background-color: var(--mainYellowColor);
+    }
+}
+
+#greenSubcontainer{
+    background-color: var(--mainGreenColor);
+    border-top: none;
+
+    .innerboxItems{
+        background-color: var(--mainGreenColor);
+    }
+}
+
+#rightleftSubcontainer{
+    border: 1.5px solid var(--darkColor);
+    border-top: none;
+    border-right: none;
+    width: 40%;
+
+    .innerBox{
+        display: flex;
+        height: 33.33%;
+        width: 100%;
+
+        .smallBoxes{
+            width: 16.67%;
+            height: 100%;
+            border-right: 1.5px solid black;
+        }
+    }
+    
+    .middleInnerbox{
+        .smallBoxes{
+            border: 1.5px solid black;
+            border-left: none;
+        }
+    }
+}
+
+#centerContainer{
+    width: 20%;
+    position: relative;
+}

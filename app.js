@@ -1,37 +1,40 @@
-//Next-Btn able when number of players is clicked
 let clickedRadio;
 const playerRadios = document.getElementsByName('players');
-playerRadios.forEach(radio => {
+const nextBtn = document.getElementById('nextBtn');
+const blackCover = document.getElementById('blackCover');
+const cancelBtn = document.getElementById('cancelBtn');
+
+
+//Next-Btn able when number of players is clicked
+playerRadios.forEach((radio, index) => {
     radio.addEventListener('click', function() {
-        playerRadios.forEach((radio, index) => {
-                    if (radio.checked) {
-                        document.getElementById("nextBtn").style.opacity = "100%";
-                        document.getElementById("nextBtn").style.cursor = "pointer";
-                        clickedRadio = index + 2;
-                    }
-                })
+        if (radio.checked) {
+            nextBtn.style.opacity = "100%";
+            nextBtn.style.cursor = "pointer";
+            nextBtn.disabled = false;
+            clickedRadio = index + 2;
+        }
     })
 })
 
 //Displaying players number container when play-now-btn is clicked
 document.getElementById("newgameBtn").addEventListener("click", function(){
     document.getElementById("playerNoContainer").style.display = "flex";
-    document.getElementById("blackCover").style.display = "block";
+    blackCover.style.display = "block";
 })
 
 //Hidding players number container and resetting players number value when cancel-btn is clicked
-document.getElementById("cancelBtn").addEventListener("click", function() {
+cancelBtn.addEventListener("click", function() {
     document.getElementById("playerNoContainer").style.display = "none";
-    document.getElementById("blackCover").style.display = "none";
+    blackCover.style.display = "none";
+    nextBtn.style.opacity = "50%";
+    nextBtn.style.cursor = "not-allowed";
+    nextBtn.disabled = true;
     playerRadios.forEach(radio => {
         radio.checked = false;
-        document.getElementById("nextBtn").style.opacity = "50%"
-        document.getElementById("nextBtn").style.cursor = "not-allowed";
-
     })
 })
 
-
-(document.getElementById("nextBtn")).addEventListener("click", function() {
-    alert(clickedRadio)
+nextBtn.addEventListener("click", function() {
+    window.location.href = 'game.html';
 })

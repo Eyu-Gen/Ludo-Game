@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="images" href="images/logo.png">
+    <link rel="stylesheet" href="style-game.css">
+    <script src="game-app.js"></script>
+    <title>Ludo Hub - Game On</title>
+</head>
+<body>
+    <!-- Ludo main Board -->
+    <main>
+        <!-- Upper row i.e red-home container, blue-home container and container between them  -->
+        <div class="container updownContainer">
+            <!-- red-home container -->
+            <div class="subcontainer colorSubcontainer centerDiv" id="redSubcontainer">
+                <div class="innerBox">
+                    <div class="innerboxItems"></div>
+                    <div class="innerboxItems"></div>
+                    <div class="innerboxItems"></div>
+                    <div class="innerboxItems"></div>
+                </div>
+            </div>
+            <!-- container between red-home and blue-home container -->
+            <div class="subcontainer updownMiddleSubcontainer">
+                <div class="innerBox rightInnerbox">
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes"></div>
+                </div>
+                <div class="innerBox middleInnerbox">
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes safeBlue"></div>
+                    <div class="smallBoxes safeBlue"></div>
+                    <div class="smallBoxes safeBlue"></div>
+                    <div class="smallBoxes safeBlue"></div>
+                    <div class="smallBoxes safeBlue"></div>
+                </div>
+                <div class="innerBox leftInnerbox">
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes safeBlue starBox centerDiv">*</div>
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes"></div>
+                </div>
+            </div>
+            <!-- blue-home container -->
+            <div class="subcontainer colorSubcontainer centerDiv" id="blueSubcontainer">
+                <div class="innerBox">
+                    <div class="innerboxItems"></div>
+                    <div class="innerboxItems"></div>
+                    <div class="innerboxItems"></div>
+                    <div class="innerboxItems"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- middle row red-shoot container, all shoot container and green-shoot container -->
+        <div class="container middleContainer">
+            <!-- red-shoot container -->
+            <div class="subcontainer" id="rightleftSubcontainer">
+                <div class="innerBox upperInnerbox">
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes safeRed starBox centerDiv">*</div>
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes"></div>
+                </div>
+                <div class="innerBox middleInnerbox">
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes safeRed"></div>
+                    <div class="smallBoxes safeRed"></div>
+                    <div class="smallBoxes safeRed"></div>
+                    <div class="smallBoxes safeRed"></div>
+                    <div class="smallBoxes safeRed"></div>
+                </div>
+                <div class="innerBox lowerInnerbox">
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes"></div>
+                </div>
+            </div>
+            <!-- all-shoot container -->
+            <div class="subcontainer centerDiv" id="centerContainer">
+                <hr id="hr1"><hr id="hr2">
+            </div>
+            <!-- green-shoot container -->
+            <div class="subcontainer" id="rightleftSubcontainer">
+                <div class="innerBox upperInnerbox">
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes"></div>
+                </div>
+                <div class="innerBox middleInnerbox">
+                    <div class="smallBoxes safeGreen"></div>
+                    <div class="smallBoxes safeGreen"></div>
+                    <div class="smallBoxes safeGreen"></div>
+                    <div class="smallBoxes safeGreen"></div>
+                    <div class="smallBoxes safeGreen"></div>
+                    <div class="smallBoxes"></div>
+                </div>
+                <div class="innerBox lowerInnerbox">
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes safeGreen starBox centerDiv">*</div>
+                    <div class="smallBoxes"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lower row i.e yellow-home container, green-home container and container between them -->
+        <div class="container updownContainer">
+            <!-- yellow-home container -->
+            <div class="subcontainer colorSubcontainer centerDiv" id="yellowSubcontainer">
+                <div class="innerBox">
+                    <div class="innerboxItems"></div>
+                    <div class="innerboxItems"></div>
+                    <div class="innerboxItems"></div>
+                    <div class="innerboxItems"></div>
+                </div>
+            </div>
+            <!-- container between yellow-home and green-home container -->
+            <div class="subcontainer updownMiddleSubcontainer">
+                <div class="innerBox rightInnerbox">
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes starBox centerDiv safeYellow">*</div>
+                    <div class="smallBoxes"></div>
+                </div>
+                <div class="innerBox middleInnerbox">
+                    <div class="smallBoxes safeYellow"></div>
+                    <div class="smallBoxes safeYellow"></div>
+                    <div class="smallBoxes safeYellow"></div>
+                    <div class="smallBoxes safeYellow"></div>
+                    <div class="smallBoxes safeYellow"></div>
+                    <div class="smallBoxes"></div>
+                </div>
+                <div class="innerBox leftInnerbox">
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes"></div>
+                </div>
+            </div>
+            <!-- green-home container -->
+            <div class="subcontainer colorSubcontainer centerDiv" id="greenSubcontainer">
+                <div class="innerBox">
+                    <div class="innerboxItems"></div>
+                    <div class="innerboxItems"></div>
+                    <div class="innerboxItems"></div>
+                    <div class="innerboxItems"></div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+</html>

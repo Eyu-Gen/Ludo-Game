@@ -38,6 +38,26 @@ body{
     }
 }
 
+.buttons{
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    color: var(--darkColor);
+    font-family: var(--primaryFont);
+    font-size: 20px;
+    background-color: var(--secondaryColor);
+    font-weight: bold;
+    box-shadow: none;
+    
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.headings{
+    font-family: var(--headingFont);
+}
+
 header{
     width: 100%;
     height: auto;
@@ -48,7 +68,6 @@ header{
     padding: 20px 50px;
     position: relative;
     top: 0;
-    font-family: var(--headingFont);
     
     #logoImage{
         width: 150px;
@@ -83,20 +102,6 @@ main{
         display: none;
     }
 
-    .buttons{
-        text-align: center;
-        border: none;
-        border-radius: 5px;
-        color: var(--darkColor);
-        font-family: var(--primaryFont);
-        font-size: 20px;
-        background-color: var(--secondaryColor);
-        font-weight: bold;
-        
-        &:hover{
-            cursor: pointer;
-        }
-    }
     
     #newgameBtn{
         padding: 15px;
