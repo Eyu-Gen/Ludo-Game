@@ -30,6 +30,7 @@ body{
     justify-content: center;
     font-family: var(--primaryFont);
     background-color: var(--primaryColor);
+    position: relative;
 }
 
 main{
@@ -38,6 +39,14 @@ main{
     background-color: var(--defaultColor);
     border: 20px solid var(--defaultColor);
     box-shadow: 2px 2px 20px var(--darkColor);
+}
+
+.imageSection{
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
 }
 
 .centerDiv{
@@ -202,4 +211,48 @@ hr{
 #centerContainer{
     width: 20%;
     position: relative;
+}
+
+.diceContainer{
+    position: absolute;
+    width: 7%;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    padding: 25px;
+
+    &:hover{
+        cursor: pointer;
+    }
+    
+    img{
+        border-radius: 5px;
+    }
+}
+
+.upper-diceContainer{
+    top: 10%;
+}
+
+.lower-diceContainer{
+    bottom: 10%;
+}
+
+.red-diceContainer{
+    left: 15%;
+    background-image: linear-gradient(to right, var(--mainRedColor), var(--defaultColor));
+}
+
+.yellow-diceContainer{
+    left: 15%;
+    background-image: linear-gradient(to right, var(--mainYellowColor), var(--defaultColor));
+}
+
+.blue-diceContainer{
+    right: 15%;
+    background-image: linear-gradient(to left, var(--mainBlueColor), var(--defaultColor));
+}
+
+.green-diceContainer{
+    right: 15%;
+    background-image: linear-gradient(to left, var(--mainGreenColor), var(--defaultColor));
 }
