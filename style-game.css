@@ -31,6 +31,7 @@ body{
     font-family: var(--primaryFont);
     background-color: var(--primaryColor);
     position: relative;
+    user-select: none;
 }
 
 main{
@@ -72,7 +73,6 @@ main{
 .starBox{
     font-size: 50px;
     color: var(--defaultColor);
-    padding-top: 15px;
 }
 
 .safeBlue{
@@ -239,20 +239,31 @@ hr{
 
 .red-diceContainer{
     left: 15%;
-    background-image: linear-gradient(to right, var(--mainRedColor), var(--defaultColor));
+    background-color: var(--defaultColor);
 }
 
 .yellow-diceContainer{
     left: 15%;
-    background-image: linear-gradient(to right, var(--mainYellowColor), var(--defaultColor));
+    background-color: var(--defaultColor);
 }
 
 .blue-diceContainer{
     right: 15%;
-    background-image: linear-gradient(to left, var(--mainBlueColor), var(--defaultColor));
+    background-color: var(--defaultColor);
 }
 
 .green-diceContainer{
     right: 15%;
-    background-image: linear-gradient(to left, var(--mainGreenColor), var(--defaultColor));
+    background-color: var(--defaultColor);
+}
+
+#backBtn{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    background-color: var(--defaultColor);
+    border-radius: 50%;
+    width: 5%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
 }

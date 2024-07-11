@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="images" href="images/logo.png">
     <link rel="stylesheet" href="style-game.css">
-    <script src="game-app.js"></script>
+    <script src="game-app.js" defer></script>
     <title>Ludo Hub - Game On</title>
 </head>
 <body>
@@ -27,7 +27,7 @@
                 <div class="innerBox rightInnerbox">
                     <div class="smallBoxes"></div>
                     <div class="smallBoxes"></div>
-                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes starBox imageSection centerDiv"><img src="images/star.svg" alt=""></div>
                     <div class="smallBoxes"></div>
                     <div class="smallBoxes"></div>
                     <div class="smallBoxes"></div>
@@ -42,7 +42,7 @@
                 </div>
                 <div class="innerBox leftInnerbox">
                     <div class="smallBoxes"></div>
-                    <div class="smallBoxes safeBlue starBox centerDiv">*</div>
+                    <div class="smallBoxes safeBlue starBox imageSection centerDiv"><img src="images/star.svg" alt=""></div>
                     <div class="smallBoxes"></div>
                     <div class="smallBoxes"></div>
                     <div class="smallBoxes"></div>
@@ -66,7 +66,7 @@
             <div class="subcontainer" id="rightleftSubcontainer">
                 <div class="innerBox upperInnerbox">
                     <div class="smallBoxes"></div>
-                    <div class="smallBoxes safeRed starBox centerDiv">*</div>
+                    <div class="smallBoxes safeRed starBox centerDiv imageSection"><img src="images/star.svg" alt=""></div>
                     <div class="smallBoxes"></div>
                     <div class="smallBoxes"></div>
                     <div class="smallBoxes"></div>
@@ -99,7 +99,7 @@
                     <div class="smallBoxes"></div>
                     <div class="smallBoxes"></div>
                     <div class="smallBoxes"></div>
-                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes starBox imageSection"><img src="images/star.svg" alt=""></div>
                     <div class="smallBoxes"></div>
                     <div class="smallBoxes"></div>
                 </div>
@@ -116,7 +116,7 @@
                     <div class="smallBoxes"></div>
                     <div class="smallBoxes"></div>
                     <div class="smallBoxes"></div>
-                    <div class="smallBoxes safeGreen starBox centerDiv">*</div>
+                    <div class="smallBoxes safeGreen starBox centerDiv imageSection"><img src="images/star.svg" alt=""></div>
                     <div class="smallBoxes"></div>
                 </div>
             </div>
@@ -140,7 +140,7 @@
                     <div class="smallBoxes"></div>
                     <div class="smallBoxes"></div>
                     <div class="smallBoxes"></div>
-                    <div class="smallBoxes starBox centerDiv safeYellow">*</div>
+                    <div class="smallBoxes starBox centerDiv safeYellow imageSection"><img src="images/star.svg" alt=""></div>
                     <div class="smallBoxes"></div>
                 </div>
                 <div class="innerBox middleInnerbox">
@@ -155,7 +155,7 @@
                     <div class="smallBoxes"></div>
                     <div class="smallBoxes"></div>
                     <div class="smallBoxes"></div>
-                    <div class="smallBoxes"></div>
+                    <div class="smallBoxes imageSection starBox"><img src="images/star.svg" alt=""></div>
                     <div class="smallBoxes"></div>
                     <div class="smallBoxes"></div>
                 </div>
@@ -173,23 +173,25 @@
 
         <!-- red-dice container -->
         <div class="diceContainer red-diceContainer upper-diceContainer imageSection centerDiv">
-            <img src="images/dice-1.svg" alt="">
+            <img src="images/dice-1.svg" class="diceImage" alt="">
         </div>
         
         <!-- blue-dice container -->
         <div class="diceContainer blue-diceContainer upper-diceContainer imageSection centerDiv">
-            <img src="images/dice-1.svg" alt="">
+            <img src="images/dice-1.svg" class="diceImage" alt="">
         </div>
         
         <!-- green-dice container -->
         <div class="diceContainer green-diceContainer lower-diceContainer imageSection centerDiv">
-            <img src="images/dice-1.svg" alt="">
+            <img src="images/dice-1.svg" class="diceImage" alt="">
         </div>
         
         <!-- yellow-dice container -->
         <div class="diceContainer yellow-diceContainer lower-diceContainer imageSection centerDiv">
-            <img src="images/dice-1.svg" alt="">
+            <img src="images/dice-1.svg" class="diceImage" alt="">
         </div>
+
+        <div class="button imageSection" id="backBtn"><img src="images/backBtn.svg" alt=""></div>
     </main>
 
 </body>
