@@ -40,6 +40,7 @@ main{
     background-color: var(--defaultColor);
     border: 20px solid var(--defaultColor);
     box-shadow: 2px 2px 20px var(--darkColor);
+    position: relative;
 }
 
 .imageSection{
@@ -266,4 +267,121 @@ hr{
     width: 5%;
     aspect-ratio: 1/1;
     overflow: hidden;
+}
+
+.smallPieces{
+    position: absolute;
+    width: 5%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 2px solid var(--darkColor);
+    z-index: 2;
+
+    .inner-pieces{
+        width: 50%;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        background-color: var(--darkColor);
+        opacity: 50%;
+    }
+}
+
+.disabled{
+    display: none;
+}
+
+.redPieces{
+    background-color: var(--darkRedColor);
+}
+
+.bluePieces{
+    background-color: var(--darkBlueColor);
+}
+
+.greenPieces{
+    background-color: var(--darkGreenColor);
+}
+
+.yellowPieces{
+    background-color: var(--darkYellowColor);
+}
+
+#redPiece-1{
+    top: 11%;
+    left: 11%;
+}
+
+#redPiece-2{
+    top: 11%;
+    left: 24%;
+}
+
+#redPiece-3{
+    top: 25%;
+    left: 11%;
+}
+
+#redPiece-4{
+    top: 25%;
+    left: 24%;
+}
+
+#bluePiece-1{
+    top: 11%;
+    right: 11%;
+}
+
+#bluePiece-2{
+    top: 11%;
+    right: 24%;
+}
+
+#bluePiece-3{
+    top: 25%;
+    right: 11%;
+}
+
+#bluePiece-4{
+    top: 25%;
+    right: 24%;
+}
+
+#yellowPiece-1{
+    bottom: 11%;
+    left: 11%;
+}
+
+#yellowPiece-2{
+    bottom: 11%;
+    left: 24%;
+}
+
+#yellowPiece-3{
+    bottom: 25%;
+    left: 11%;
+}
+
+#yellowPiece-4{
+    bottom: 25%;
+    left: 24%;
+}
+
+#greenPiece-1{
+    bottom: 11%;
+    right: 11%;
+}
+
+#greenPiece-2{
+    bottom: 11%;
+    right: 24%;
+}
+
+#greenPiece-3{
+    bottom: 25%;
+    right: 11%;
+}
+
+#greenPiece-4{
+    bottom: 25%;
+    right: 24%;
 }

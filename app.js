@@ -35,6 +35,9 @@ cancelBtn.addEventListener("click", function() {
     })
 })
 
+//Redirecting to game-page
 nextBtn.addEventListener("click", function() {
     window.location.href = 'game.html';
 })
+
+// export { clickedRadio };

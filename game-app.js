@@ -1,6 +1,10 @@
 const diceContainers = document.getElementsByClassName("diceContainer");
 const diceImages = document.getElementsByClassName("diceImage");
+const bluePieces = document.getElementsByClassName("bluePieces");
+const greenPieces = document.getElementsByClassName("greenPieces");
+// import { clickedRadio } from './app.js';
 let clickedContainerIndex = 0;
+
 
 // Function to remove background gradient from all containers
 function resetContainerBackgrounds() {
@@ -23,13 +27,21 @@ Array.from(diceContainers).forEach((divContainer, index) => {
             if (diceImages[index]) {
                 diceImages[index].src = imageSource;
             }
+            
 
-            // Remove background gradient from all containers
-            resetContainerBackgrounds();
 
-            // Move to the next container in sequence and apply background gradient
-            clickedContainerIndex = (clickedContainerIndex + 1) % diceContainers.length;
-            diceContainers[clickedContainerIndex].style.backgroundImage = "linear-gradient(to right, var(--darkColor), var(--defaultColor))";
+            if(randomNumber != 6) {
+                // Remove background gradient from all containers
+                resetContainerBackgrounds();
+    
+                // Move to the next container in sequence and apply background gradient
+                clickedContainerIndex = (clickedContainerIndex + 1) % diceContainers.length;
+                diceContainers[clickedContainerIndex].style.backgroundImage = "linear-gradient(to right, var(--darkColor), var(--defaultColor))";
+            }
         }
-    });
-});
+    })
+})
+
+document.getElementById("backBtn").addEventListener("click", function() {
+    alert(clickedRadio);
+})
