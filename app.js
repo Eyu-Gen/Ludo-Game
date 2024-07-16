@@ -1,8 +1,8 @@
-let clickedRadio;
 const playerRadios = document.getElementsByName('players');
 const nextBtn = document.getElementById('nextBtn');
 const blackCover = document.getElementById('blackCover');
 const cancelBtn = document.getElementById('cancelBtn');
+let clickedRadio;
 
 
 //Next-Btn able when number of players is clicked
@@ -12,7 +12,8 @@ playerRadios.forEach((radio, index) => {
             nextBtn.style.opacity = "100%";
             nextBtn.style.cursor = "pointer";
             nextBtn.disabled = false;
-            clickedRadio = index + 2;
+            clickedRadio = index === 0 ? 2 : 4;
+            sessionStorage.setItem("clickedRadioValue", clickedRadio);
         }
     })
 })
@@ -39,5 +40,3 @@ cancelBtn.addEventListener("click", function() {
 nextBtn.addEventListener("click", function() {
     window.location.href = 'game.html';
 })
-
-// export { clickedRadio };

@@ -2,7 +2,7 @@ const diceContainers = document.getElementsByClassName("diceContainer");
 const diceImages = document.getElementsByClassName("diceImage");
 const bluePieces = document.getElementsByClassName("bluePieces");
 const greenPieces = document.getElementsByClassName("greenPieces");
-// import { clickedRadio } from './app.js';
+
 let clickedContainerIndex = 0;
 
 
@@ -43,5 +43,6 @@ Array.from(diceContainers).forEach((divContainer, index) => {
 })
 
 document.getElementById("backBtn").addEventListener("click", function() {
+    const clickedRadio = sessionStorage.getItem("clickedRadioValue");
     alert(clickedRadio);
 })
