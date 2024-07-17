@@ -2,9 +2,24 @@ const diceContainers = document.getElementsByClassName("diceContainer");
 const diceImages = document.getElementsByClassName("diceImage");
 const bluePieces = document.getElementsByClassName("bluePieces");
 const greenPieces = document.getElementsByClassName("greenPieces");
+const yellowPieces = document.getElementsByClassName("yellowPieces");
+const smallPieces = document.getElementsByClassName("smallPieces");
+
+const clickedRadio = sessionStorage.getItem("clickedRadioValue");
+
+if (clickedRadio == 2) {
+    for(let i = 0; i < 4; i++) {
+        greenPieces[i].classList.remove("disabled");
+    }
+}
+
+if (clickedRadio == 4) {
+    for(let i = 0; i < 16; i++) {
+        smallPieces[i].classList.remove("disabled");
+    }
+}
 
 let clickedContainerIndex = 0;
-
 
 // Function to remove background gradient from all containers
 function resetContainerBackgrounds() {
@@ -43,6 +58,5 @@ Array.from(diceContainers).forEach((divContainer, index) => {
 })
 
 document.getElementById("backBtn").addEventListener("click", function() {
-    const clickedRadio = sessionStorage.getItem("clickedRadioValue");
     alert(clickedRadio);
 })

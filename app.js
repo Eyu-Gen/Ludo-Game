@@ -4,7 +4,6 @@ const blackCover = document.getElementById('blackCover');
 const cancelBtn = document.getElementById('cancelBtn');
 let clickedRadio;
 
-
 //Next-Btn able when number of players is clicked
 playerRadios.forEach((radio, index) => {
     radio.addEventListener('click', function() {
